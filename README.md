@@ -4,6 +4,23 @@ Este repositorio será utilizado para construir progresivamente un proyecto peda
 
 ## Advertencia
 
+nombre del estudiante: jorge alejandro bernal diaz 
+
+nombre del proyecto:
+
+proposito: aprender como la tecnologia sirve para apoyar ejercicios pedagogicos de participacion juvenil, con trazabilidad y  transparencia 
+
+# reglas de cuidado
+-no usar datos reales 
+-no usar cedula 
+-no usar informacion cencible 
+-no usar nombres de candidatos reales 
+-no presentar resultados como oficiales 
+
+## importancia de git 
+git permite registrar los cambios del proyecto y revisar que se modifico en cada momento 
+-----------------------------------------------------------------------------------------------------------------
+
 Este proyecto es únicamente académico.
 
 No corresponde a una elección real.

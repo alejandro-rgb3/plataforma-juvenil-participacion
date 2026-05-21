@@ -1,0 +1,70 @@
+/* Estilos básicos para una página limpia y profesional */
+
+/* Todo el cuerpo de la página usa una tipografía sencilla y un fondo suave */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #1d2939;
+    line-height: 1.7;
+}
+
+/* Centro el contenido y lo hago más fácil de leer */
+.page-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 32px;
+    background-color: #ffffff;
+    box-shadow: 0 18px 45px rgba(31, 41, 55, 0.08);
+    border-radius: 22px;
+}
+
+/* Encabezado principal con una línea fina debajo */
+h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin: 0 0 18px;
+    color: #111827;
+    letter-spacing: -0.03em;
+}
+
+/* Subtítulos claros y consistentes */
+h2,
+h3 {
+    color: #334155;
+    margin-top: 36px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
+/* Párrafos con espacio uniforme */
+p {
+    margin: 0 0 18px;
+    font-size: 1rem;
+}
+
+/* Un estilo suave para los bloques de texto importantes */
+.notice {
+    padding: 18px;
+    border-left: 4px solid #2563eb;
+    background-color: #eff6ff;
+    color: #1e3a8a;
+    border-radius: 14px;
+}
+
+/* Enlaces eventualemente añadidos se verán profesionales */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
