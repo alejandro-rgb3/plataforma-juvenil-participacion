@@ -15,3 +15,4 @@ botonesPerfil.forEach(function (boton) {
     const perfil = boton.getAttribute("data-perfil");
     detallePerfil.textContent = `informacion detallada del perfil ${perfil}`;
   });
+});
