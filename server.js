@@ -18,7 +18,7 @@ function leerVotos() {
 
 function guardarVotos(votos) {
   fs.writeFileSync(rutaVotos, JSON.stringify(votos, null, 2));
-} 
+}
 
 function leerCandidatos() {
   const data = fs.readFileSync(rutaCandidatos, "utf8");
@@ -43,17 +43,6 @@ app.post("/api/candidatos", function (req, res) {
     estado: "Perfil de práctica académica"
   };
 
-  app.post("/api/candidatos", function (req, res) {
-    const identificacion = req.body.identificacion;
-    const candidato = req.body.candidato;
-
-    const nuevoVoto = {
-      id: Date.now(),
-      identificacion: identificacion,
-      candidato: candidato,
-      fecha: new Date().toISOString()
-    };  
-    
   if (!nuevoCandidato.nombre || !nuevoCandidato.rol || !nuevoCandidato.propuesta) {
     return res.status(400).json({
       mensaje: "Faltan datos obligatorios"
@@ -70,19 +59,31 @@ app.post("/api/candidatos", function (req, res) {
   });
 });
 
-const votos = leerVotos();
-  id: date.now(),
-  identificacion: identificacion,
-  candidato: candidato,
-  fecha: new Date().toISOString()
-}; 
+app.post("/api/votos", function (req, res) {
+  const identificacion = req.body.identificacion;
+  const candidato = req.body.candidato;
 
-votos.push(nuevoVoto);
-guardarVotos(votos);
+  if (!identificacion || !candidato) {
+    return res.status(400).json({
+      mensaje: "Faltan datos obligatorios para el voto"
+    });
+  }
 
-res.status(201).json({
-  mensaje: "Voto pedagogico correctamente",
-  voto: nuevoVoto
+  const nuevoVoto = {
+    id: Date.now(),
+    identificacion,
+    candidato,
+    fecha: new Date().toISOString()
+  };
+
+  const votos = leerVotos();
+  votos.push(nuevoVoto);
+  guardarVotos(votos);
+
+  res.status(201).json({
+    mensaje: "Voto registrado correctamente",
+    voto: nuevoVoto
+  });
 });
 
 app.listen(PORT, function () {
